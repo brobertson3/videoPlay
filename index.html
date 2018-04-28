@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Submitted by Brent Robertson -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Video Player</title>
+	<meta name="description" content="Created a video player.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="js/index.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	
+</head>
+<body>
+	<header>
+		<h1>Video Player</h1>
+	</header>
+	<main id="video-section">
+		<!-- First try HTML5 playback -->
+		<video id="our-video" width="640" height="360">
+			<!-- MP4 must be first for iPad! -->
+			<source src="assets/small.mp4" type="video/mp4" /><!-- WebKit video    -->
+			<source src="assets/small.ogv" type="video/ogg" /><!-- Firefox / Opera -->
+			<!-- fallback to Flash: -->
+			<object width="640" height="360" type="application/x-shockwave-flash" data="assets/Car-speakers-590x90.swf">
+				<!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+				<param name="movie" value="assets/Car-speakers-590x90.swf" />
+				<param name="flashvars" value="controlbar=over&amp;image=assets/small_image.png&amp;file=assets/small.mp4" />
+				<!-- fallback image. -->
+				<img src="assets/small_image.png" width="640" height="360" alt="Fallback image of the video."
+			     	title="No video playback capabilities, please download the video below" />
+			</object>
+		</video>
+
+		<div class="btn" id="play-btn" role="button">Play</div><div class="btn" id="pause-btn" role="button">Pause</div><div class="btn" id="restart-btn" role="button">Restart</div><div id="video-progress"><div id="my-bar"></div></div>
+
+		<p id="message" class="hidden">Video is finished playing</p>
+		<!-- Offer a download link as they may be able to play the file locally. -->
+		<p>	<strong>Download Video:</strong>
+			Closed Format:	<a href="assets/small.mp4">"MP4"</a>
+			Open Format:	<a href="assets/small.ogv">"Ogg"</a>
+		</p>
+	</main>
+</body>
+</html>

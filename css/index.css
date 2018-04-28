@@ -1,0 +1,52 @@
+/* Submitted by Brent Robertson */
+.btn {
+	height: 30px;
+	background-color: #f0f0f0;
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+	line-height: 30px;
+	border: 1px solid #000000;
+	margin: 0;
+	border-right: none;
+}
+
+/* Grab the first button and align with video */
+div.btn:first-of-type {
+	margin-left: 5px;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+video {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+main {
+	display: inline-block;
+}
+
+#video-progress {
+	display: inline-block;
+	vertical-align: top;
+	background-color: #f8f8f8;
+	height: 30px;
+	border: 1px solid #000;
+}
+
+#my-bar {
+	display: inline-block;
+	height: 30px;
+	background-color: #000;
+}
+
+#message {
+	font-size: 1.4rem;
+	color: #D18DEC;
+}
